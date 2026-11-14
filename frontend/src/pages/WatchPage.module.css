@@ -1,0 +1,247 @@
+.container {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 5rem;
+  position: relative;
+  z-index: 1;
+}
+
+.backBar {
+  margin-bottom: 1.25rem;
+}
+
+.backBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.4rem 0.85rem;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--border-subtle);
+  transition: all var(--transition-fast);
+}
+
+.backBtn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--border-accent);
+}
+
+.watchLayout {
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.mainColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+.videoHeader {
+  margin-top: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.videoTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.metaRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.channelInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.channelAvatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--accent-primary);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.3);
+}
+
+.channelName {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.verifiedBadge {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.statsRow {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Description Card */
+.descCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  transition: all var(--transition-normal);
+}
+
+.descHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.descContent {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow: hidden;
+}
+
+.descCollapsed {
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+
+.toggleDescBtn {
+  margin-top: 0.75rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  transition: color var(--transition-fast);
+}
+
+.toggleDescBtn:hover {
+  color: #818cf8;
+}
+
+/* Sidebar / Intentional Focus Box */
+.sideColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.focusCard {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.focusCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent-primary);
+}
+
+.focusTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.focusList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.focusItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.85rem;
+  line-height: 1.45;
+  color: var(--text-secondary);
+}
+
+.bullet {
+  color: var(--accent-cyan);
+  font-weight: 800;
+}
+
+.externalLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+.externalLink:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--border-accent);
+}
+
+@media (max-width: 980px) {
+  .watchLayout {
+    grid-template-columns: 1fr;
+  }
+  .sideColumn {
+    margin-top: 1rem;
+  }
+}

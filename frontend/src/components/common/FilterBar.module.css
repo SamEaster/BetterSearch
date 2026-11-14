@@ -1,0 +1,172 @@
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.85rem 1.25rem;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-subtle);
+}
+
+.leftGroup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.filterLabel {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-right: 0.25rem;
+}
+
+.pillsGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  background: var(--bg-surface-elevated);
+  padding: 0.25rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+}
+
+.pillButton {
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  transition: all var(--transition-fast);
+}
+
+.pillButton:hover {
+  color: var(--text-primary);
+  background: rgba(128, 128, 128, 0.1);
+}
+
+.pillActive {
+  background: var(--accent-primary);
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(239, 68, 68, 0.35);
+}
+
+.rightGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.selectWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.select {
+  appearance: none;
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 0.45rem 2rem 0.45rem 0.85rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: border-color var(--transition-fast);
+}
+
+.select:focus {
+  border-color: var(--accent-primary);
+}
+
+.selectIcon {
+  position: absolute;
+  right: 0.75rem;
+  pointer-events: none;
+  color: var(--text-muted);
+}
+
+.toggleWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.toggleInput {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.toggleTrack {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+  background-color: var(--scrollbar-thumb);
+  border-radius: var(--radius-full);
+  transition: background-color var(--transition-normal);
+}
+
+.toggleTrackActive {
+  background-color: var(--accent-primary);
+  box-shadow: 0 0 10px rgba(99, 102, 241, 0.4);
+}
+
+.toggleThumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border-radius: 50%;
+  transition: transform var(--transition-spring);
+}
+
+.toggleThumbActive {
+  transform: translateX(18px);
+}
+
+.toggleText {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.resetBtn {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  padding: 0.35rem 0.6rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.resetBtn:hover {
+  color: var(--accent-rose);
+  background: rgba(244, 63, 94, 0.1);
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .rightGroup {
+    width: 100%;
+    justify-content: space-between;
+  }
+}
